@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
     public static FloatManager FloatManager;
 
-
     void Awake()
     {
         if (Instance == null) // check if instance exists
@@ -24,8 +23,10 @@ public class GameManager : MonoBehaviour {
     private void GetMenagers()
     {
         FloatManager = GetComponent<FloatManager>();
+
+
     }
 
 
-   
+
 }
