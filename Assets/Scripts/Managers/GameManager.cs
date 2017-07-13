@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
 
     public static GameManager Instance;
+    public static FloatManager FloatManager;
 
 
     void Awake()
@@ -16,8 +17,14 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);    // destroy it
 
         DontDestroyOnLoad(gameObject); // dont destroy this when reloading scene
+        GetMenagers();
     }
 
+
+    private void GetMenagers()
+    {
+        FloatManager = GetComponent<FloatManager>();
+    }
 
 
    
