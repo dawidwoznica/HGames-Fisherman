@@ -11,6 +11,7 @@ public class FishermanController : MonoBehaviour
     public FishingRodController FishingRodController;
     public FishController FishController;
     public ProgressBarController ProgressBarController;
+    public GameFinishController GameFinishController;
     public GameObject FishingUI;
     public Image[] FishImages;
     private int _fishOwned = 0;
@@ -44,6 +45,11 @@ public class FishermanController : MonoBehaviour
         FishImages[_fishOwned].sprite = FishController.Fish;
         
         _fishOwned++;
+
+        if (_fishOwned == 3)
+        {
+            GameFinishController.FinishTheGame();
+        }
     }
 
     void StartFishing()
@@ -60,11 +66,7 @@ public class FishermanController : MonoBehaviour
         _isFishing = false;
         FloatController.HideFloat();
         FishingRodController.ReelIn();
-        FishingUI.SetActive(false);
-        if (_fishOwned == 3)
-        {
-            // wygrana
-        }
+        FishingUI.SetActive(false);      
     }
 
     IEnumerator WaitForWish()
