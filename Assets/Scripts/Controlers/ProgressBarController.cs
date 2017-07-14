@@ -43,4 +43,9 @@ public class ProgressBarController : MonoBehaviour
     {
         FillImage.color = Color.Lerp(NoProgressColor, FullProgressColor, _progressBar.value / MaxProgressBarValue);
     }
+
+    public void ResetProgress()
+    {
+        _progressBar.value = 0;
+    }
 }
