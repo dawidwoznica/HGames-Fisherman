@@ -14,7 +14,7 @@ public class FishController : MonoBehaviour
     public Sprite Fish;
 
 
-    void Start()
+    void Awake()
     {
         _rect = GetComponent<RectTransform>();
     }

@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
     public static FloatManager FloatManager;
     public static FishManager FishManager;
-    public static LevelManager LevelManager;
 
 
     void Awake()
@@ -18,19 +17,12 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);    // destroy it
 
         DontDestroyOnLoad(gameObject); // dont destroy this when reloading scene
-        GetMenagers();
-        InitGame();
+        GetManagers();
     }
 
-    private void GetMenagers()
+    private void GetManagers()
     {
         FloatManager = GetComponent<FloatManager>();
         FishManager = GetComponent<FishManager>();
-        LevelManager = GetComponent<LevelManager>();
-    }
-
-    void InitGame()
-    {
-        LevelManager.PrepareGame();
     }
 }

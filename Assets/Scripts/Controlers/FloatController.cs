@@ -7,11 +7,16 @@ public class FloatController : MonoBehaviour
                  
     private Vector3 _startPosition;
     private Vector3 _currentPosition;
+    private AudioSource _waterSplashSound;
 
+    void Awake()
+    {
+        _waterSplashSound = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
-        _startPosition = transform.position;
+        _startPosition = transform.position;     
     }
 
 
@@ -31,11 +36,11 @@ public class FloatController : MonoBehaviour
     public void ShowFloat()
     {
         gameObject.SetActive(true);
+        _waterSplashSound.Play();
     }
 
     public void HideFloat()
     {
         gameObject.SetActive(false);
     }
-	
 }

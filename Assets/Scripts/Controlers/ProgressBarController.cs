@@ -14,7 +14,7 @@ public class ProgressBarController : MonoBehaviour
     public FishermanController FishermanController;
 
 
-	void Start ()
+	void Awake ()
 	{
 	    _progressBar = GetComponent<Slider>();
 	}

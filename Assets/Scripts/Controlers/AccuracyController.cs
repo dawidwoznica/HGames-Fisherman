@@ -9,7 +9,7 @@ public class AccuracyController : MonoBehaviour
     private bool _triggered;
 
 
-    void Start()
+    void Awake()
     {
         _rect = GetComponent<RectTransform>();
     }

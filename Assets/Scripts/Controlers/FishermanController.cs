@@ -11,11 +11,14 @@ public class FishermanController : MonoBehaviour
     public FishController FishController;
     public GameObject FishingUI;
 
-
+    void Start()
+    {
+        StopFishing();
+    }
 	
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.Space) && !_isFishing)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if(_isFishing)
                 StopFishing();
@@ -36,7 +39,7 @@ public class FishermanController : MonoBehaviour
         _isFishing = true;
         FloatController.ShowFloat();
         FishingRodController.Throw();
-        FishingUI.SetActive(true);
+        StartCoroutine(WaitForWish());
     }
 
     public void StopFishing()
@@ -45,5 +48,12 @@ public class FishermanController : MonoBehaviour
         FloatController.HideFloat();
         FishingRodController.ReelIn();
         FishingUI.SetActive(false);
+    }
+
+    IEnumerator WaitForWish()
+    {
+        int randomTime = Random.Range(1, 5);
+        yield return new WaitForSeconds(randomTime);
+        FishingUI.SetActive(true);
     }
 }
