@@ -192,6 +192,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1480316481948636, guid: 8018239b24866344c8a7ba0011b77ea9,
     type: 2}
   m_PrefabInternal: {fileID: 395069354}
+--- !u!114 &362823824 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114704284653532704, guid: 8018239b24866344c8a7ba0011b77ea9,
+    type: 2}
+  m_PrefabInternal: {fileID: 395069354}
+  m_Script: {fileID: 11500000, guid: 4d4f92758b8aec74f8bbe490bd32baca, type: 3}
 --- !u!1 &366310375
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +420,36 @@ Prefab:
       propertyPath: m_Name
       value: Accuracy
       objectReference: {fileID: 0}
+    - target: {fileID: 114219377170953774, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: FishermanController
+      value: 
+      objectReference: {fileID: 762366478}
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.108947754
+      objectReference: {fileID: 0}
+    - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 57.463318
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8018239b24866344c8a7ba0011b77ea9, type: 2}
   m_IsPrefabParent: 0
@@ -501,6 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloatController: {fileID: 967728067}
   FishingRodController: {fileID: 715999701}
+  FishController: {fileID: 362823824}
   FishingUI: {fileID: 252262159}
 --- !u!1001 &766611892
 Prefab:
@@ -543,7 +580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1758679878019358, guid: 7d3c7f4c954640c4c8953da4d297781c, type: 2}
       propertyPath: m_Name
-      value: Player
+      value: Fisherman
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d3c7f4c954640c4c8953da4d297781c, type: 2}
@@ -699,17 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cac4106d5036e4f990a8fef8299b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &967728068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 967728066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57cac4106d5036e4f990a8fef8299b76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1004600086
 Prefab:
   m_ObjectHideFlags: 0
@@ -756,6 +782,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e4e053feddc6124fb54ffe58ad238f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1110138948 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1787156959972630, guid: d41fef3846644cc4d8f3f4b3d4442ad9,
+    type: 2}
+  m_PrefabInternal: {fileID: 390233757}
+--- !u!114 &1110138949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110138948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1e2552956c29246ab1e3fefce87646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishermanController: {fileID: 762366478}
 --- !u!1001 &1287311119
 Prefab:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class AccuracyController : MonoBehaviour
     public ProgressBarController ProgressBarController;
     private bool _triggered;
 
+
     void Start()
     {
         _rect = GetComponent<RectTransform>();
