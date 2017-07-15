@@ -12,13 +12,16 @@ public class FishermanController : MonoBehaviour
     public FishController FishController;
     public ProgressBarController ProgressBarController;
     public GameFinishController GameFinishController;
-    public GameObject FishingUI;
+    public GameObject ProgressBar;
+    public GameObject FishingPanel;
     public Image[] FishImages;
-    private int _fishOwned = 0;
+    public Text InfoText;
+    private int _fishOwned;
 
 
     void Start()
     {
+        _fishOwned = GameManager.FishermanManager.StartingNumberOfFish;
         StopFishing();
         foreach (Image image in FishImages)
         {
@@ -37,10 +40,10 @@ public class FishermanController : MonoBehaviour
         }
 	}
 
-    public void Jerk()
+    public void GetFish()
     {
         StopFishing();
-        FishController.GetFish();
+        FishController.DrawFish();
         FishImages[_fishOwned].gameObject.SetActive(true);
         FishImages[_fishOwned].sprite = FishController.Fish;
         
@@ -56,6 +59,7 @@ public class FishermanController : MonoBehaviour
     {
         ProgressBarController.ResetProgress();
         _isFishing = true;
+        InfoText.text = GameManager.FishermanManager.UseArrowText;
         FloatController.ShowFloat();
         FishingRodController.Throw();
         StartCoroutine(WaitForWish());
@@ -64,15 +68,18 @@ public class FishermanController : MonoBehaviour
     public void StopFishing()
     {
         _isFishing = false;
+        InfoText.text = GameManager.FishermanManager.PressSpaceText;
         FloatController.HideFloat();
         FishingRodController.ReelIn();
-        FishingUI.SetActive(false);      
+        ProgressBar.SetActive(false);
+        FishingPanel.SetActive(false);
     }
 
     IEnumerator WaitForWish()
     {
         int randomTime = Random.Range(1, 5);
         yield return new WaitForSeconds(randomTime);
-        FishingUI.SetActive(true);
+        ProgressBar.SetActive(true);
+        FishingPanel.SetActive(true);
     }
 }

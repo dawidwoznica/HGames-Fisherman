@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114133352306625542}
   - component: {fileID: 114817076563618346}
   - component: {fileID: 114721023513857102}
+  - component: {fileID: 114704388255273520}
   m_Layer: 0
   m_Name: pref_GameManager
   m_TagString: Untagged
@@ -53,6 +54,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3653dd393e755f4b843c52242c96d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114704388255273520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787156959972630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8b45f8fb5b1804e9ba5aee87e95ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxProgressValue: 1
+  ProgressPossitiveValue: 0.002
+  ProgressNegativeValue: 0.002
+  FullProgressColor: {r: 0, g: 1, b: 0, a: 1}
+  NoProgressColor: {r: 1, g: 0, b: 0, a: 1}
+  StartingValue: 0
 --- !u!114 &114721023513857102
 MonoBehaviour:
   m_ObjectHideFlags: 1

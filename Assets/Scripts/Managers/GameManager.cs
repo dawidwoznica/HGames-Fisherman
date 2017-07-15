@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
     public static FloatManager FloatManager;
     public static FishManager FishManager;
+    public static ProgressBarManager ProgressBarManager;
+    public static FishermanManager FishermanManager;
 
 
     void Awake()
@@ -24,5 +26,7 @@ public class GameManager : MonoBehaviour {
     {
         FloatManager = GetComponent<FloatManager>();
         FishManager = GetComponent<FishManager>();
+        ProgressBarManager = GetComponent<ProgressBarManager>();
+        FishermanManager = GetComponent<FishermanManager>();
     }
 }

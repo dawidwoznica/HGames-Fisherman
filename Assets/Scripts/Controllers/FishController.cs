@@ -10,7 +10,7 @@ public class FishController : MonoBehaviour
     private int _randomValue;
     private Vector3 _start;
     private Vector3 _destination;
-    public int Speed;
+    public float Speed;
     public Sprite Fish;
 
 
@@ -22,14 +22,14 @@ public class FishController : MonoBehaviour
     void Update()
     {
         _randomValue = Random.Range(-700, 700);
-        Speed = Random.Range(1, 4);
+        Speed = Random.Range(0.5f, 2);
         _start = _rect.anchoredPosition;
         _destination = new Vector3(0, _randomValue, 0);
 
-        _rect.anchoredPosition = Vector3.Lerp(_start, _destination, Time.deltaTime * Speed / 2);
+        _rect.anchoredPosition = Vector3.Lerp(_start, _destination, Time.deltaTime * Speed);
     }
 
-    public void GetFish()
+    public void DrawFish()
     {
         int random = Random.Range(1, 10);
 

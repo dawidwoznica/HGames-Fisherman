@@ -30,13 +30,14 @@ public class SceneLoader : MonoBehaviour {
         StartButton.SetActive(false);
         QuitButton.SetActive(false);
         loadingText.gameObject.SetActive(true);
- 
+
         // ...then pulse the transparency of the loading text to let the player know that the computer is still working.
-        loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+        loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b,
+            Mathf.PingPong(Time.time, 1));
 
     }
 
-    
+
 
 
     // The coroutine runs on its own at the same time as Update() and takes an integer indicating which scene to load.

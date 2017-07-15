@@ -7,10 +7,7 @@ using UnityEngine.UI;
 public class ProgressBarController : MonoBehaviour
 {
     private Slider _progressBar;
-    public Color FullProgressColor = Color.green;
-    public Color NoProgressColor = Color.red;
     public Image FillImage;
-    public int MaxProgressBarValue = 1;
     public FishermanController FishermanController;
 
 
@@ -21,31 +18,31 @@ public class ProgressBarController : MonoBehaviour
 
     void Update()
     {
-        if (_progressBar.value == MaxProgressBarValue)
+        if (_progressBar.value == GameManager.ProgressBarManager.MaxProgressValue)
         {
-            FishermanController.Jerk();
+            FishermanController.GetFish();
         }
     }
 
     public void AddProgress()
     {
-        _progressBar.value += 0.002f;
+        _progressBar.value +=GameManager.ProgressBarManager.ProgressPossitiveValue;
         SetProgressColor();
     }
 
     public void DeleteProgress()
     {
-        _progressBar.value -= 0.003f;
+        _progressBar.value -= GameManager.ProgressBarManager.ProgressNegativeValue;
         SetProgressColor();
     }
 
     void SetProgressColor()
     {
-        FillImage.color = Color.Lerp(NoProgressColor, FullProgressColor, _progressBar.value / MaxProgressBarValue);
+        FillImage.color = Color.Lerp(GameManager.ProgressBarManager.NoProgressColor, GameManager.ProgressBarManager.FullProgressColor, _progressBar.value / GameManager.ProgressBarManager.MaxProgressValue);
     }
 
     public void ResetProgress()
     {
-        _progressBar.value = 0;
+        _progressBar.value = GameManager.ProgressBarManager.StartingValue;
     }
 }
