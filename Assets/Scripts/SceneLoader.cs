@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -16,14 +17,14 @@ public class SceneLoader : MonoBehaviour
     private GameObject QuitButton;
 
 
-    void Update()
+    /*void Update()
     {
         if (loadingText.gameObject.activeInHierarchy)
         {
             loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b,
             Mathf.PingPong(Time.time, 1)); // then pulse the transparency of the loading text to let the player know that the computer is still working
         }
-    }
+    }*/
 
     public void LoadLevel()
     {

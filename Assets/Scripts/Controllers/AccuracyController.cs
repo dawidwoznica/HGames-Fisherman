@@ -26,13 +26,13 @@ public class AccuracyController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            if (_accuracyBarRect.anchoredPosition.y < 150)
+            if (_accuracyBarRect.anchoredPosition.y < Screen.currentResolution.height / 4.44f)
                 _accuracyBarRect.anchoredPosition += Vector2.up * Time.deltaTime * 200;                    
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            if (_accuracyBarRect.anchoredPosition.y > -57)
+            if (_accuracyBarRect.anchoredPosition.y > Screen.currentResolution.height / 11.4f * -1)
                 _accuracyBarRect.anchoredPosition += Vector2.down * Time.deltaTime *200; 
         }
 
