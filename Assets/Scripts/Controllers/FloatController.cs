@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FloatController : MonoBehaviour
-{
-                 
+{                
     private Vector3 _startPosition;
     private Vector3 _currentPosition;
     private AudioSource _waterSplashSound;
@@ -26,8 +25,12 @@ public class FloatController : MonoBehaviour
     }
 
 
-    void Floating() /// <summary> let's make float float :P </summary>
+    void Floating() 
     {
+        /// <summary> 
+        /// Let's make float float :P 
+        /// </summary>
+
         // setting Y position between amplitude(-0.2, 0.2) depending on time
         _currentPosition = new Vector3(_startPosition.x, (_startPosition.y + GameManager.FloatManager.Amplitude * Mathf.Sin(GameManager.FloatManager.Speed * Time.time)), _startPosition.z); 
         transform.position = _currentPosition;
@@ -36,6 +39,7 @@ public class FloatController : MonoBehaviour
     public void ShowFloat()
     {
         gameObject.SetActive(true);
+
         _waterSplashSound.Play();
     }
 

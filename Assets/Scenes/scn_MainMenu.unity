@@ -403,6 +403,25 @@ MonoBehaviour:
   loadingText: {fileID: 1460557542}
   StartButton: {fileID: 537110282}
   QuitButton: {fileID: 883088707}
+--- !u!1 &562176906 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1787156959972630, guid: d41fef3846644cc4d8f3f4b3d4442ad9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1129016332}
+--- !u!114 &562176907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562176906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42cce70f1f0e8bb4f91f203dcdf14293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNumberOfFish: 0
+  PressSpaceText: Press Space to start fishing
+  UseArrowText: Now use Up/Down arrow keys
 --- !u!1 &883088707
 GameObject:
   m_ObjectHideFlags: 0

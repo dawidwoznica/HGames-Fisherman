@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishingRodController : MonoBehaviour {
-
+public class FishingRodController : MonoBehaviour
+{
+    /// <summary>
+    /// Fishing rod rotation.
+    /// </summary>
 
     public void Throw()
     {
@@ -14,4 +17,5 @@ public class FishingRodController : MonoBehaviour {
     {
         transform.rotation = Quaternion.Euler(0, 0, 45);
     }
+
 }

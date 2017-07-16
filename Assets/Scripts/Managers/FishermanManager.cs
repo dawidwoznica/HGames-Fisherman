@@ -9,4 +9,5 @@ public class FishermanManager : MonoBehaviour
     public int StartingNumberOfFish = 0;
     public String PressSpaceText = "Press Space to start fishing";
     public String UseArrowText = "Now use Up/Down arrow keys";
+
 }

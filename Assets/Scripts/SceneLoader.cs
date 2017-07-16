@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneLoader : MonoBehaviour {
-
-
+public class SceneLoader : MonoBehaviour
+{
     [SerializeField]
     private int scene;
     [SerializeField]
@@ -17,40 +16,28 @@ public class SceneLoader : MonoBehaviour {
     private GameObject QuitButton;
 
 
-    // Updates once per frame
     public void LoadLevel()
     {
+        loadingText.text = "Loading..."; // set text to loading
 
-        // ...change the instruction text to read "Loading..."
-        loadingText.text = "Loading...";
+        StartCoroutine(LoadNewScene()); // start the coroutine that will load the scene
 
-        // ...and start a coroutine that will load the desired scene.
-        StartCoroutine(LoadNewScene());
-
-        StartButton.SetActive(false);
+        StartButton.SetActive(false); // hide buttons
         QuitButton.SetActive(false);
-        loadingText.gameObject.SetActive(true);
+        loadingText.gameObject.SetActive(true); // and show the loading text
 
-        // ...then pulse the transparency of the loading text to let the player know that the computer is still working.
         loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b,
-            Mathf.PingPong(Time.time, 1));
-
+            Mathf.PingPong(Time.time, 1)); // then pulse the transparency of the loading text to let the player know that the computer is still working
     }
 
-
-
-
-    // The coroutine runs on its own at the same time as Update() and takes an integer indicating which scene to load.
     IEnumerator LoadNewScene()
     {
-        // Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
-        AsyncOperation async = SceneManager.LoadSceneAsync(scene);
+        AsyncOperation async = SceneManager.LoadSceneAsync(scene); // start async scene loading
 
-        // While the asynchronous operation to load the new scene is not yet complete, continue waiting until it's done.
-        while (!async.isDone)
+        while (!async.isDone) // wait until async load will be completed
         {
             yield return null;
         }
-
     }
+
 }

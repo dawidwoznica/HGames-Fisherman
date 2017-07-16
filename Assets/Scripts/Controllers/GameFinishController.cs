@@ -5,22 +5,21 @@ using UnityEngine.UI;
 
 public class GameFinishController : MonoBehaviour
 {
-    private Animator _anim;
+    private Animator _animmator;
+    public Image[] OwnedFishImages; // owned fish images
     public FishermanController FishermanController;
-    public Image[] OwnedFishImages;
 
     void Awake()
     {
-        _anim = GetComponent<Animator>();
+        _animmator = GetComponent<Animator>();
     }
-
 
     public void FinishTheGame()
     {
-        _anim.SetTrigger("GameOver");
+        _animmator.SetTrigger("GameFinished"); // start the animation for summary screen
         for (int i = 0; i < 3; i++)
         {
-            OwnedFishImages[i].sprite = FishermanController.FishImages[i].sprite;
+            OwnedFishImages[i].sprite = FishermanController.FishImages[i].sprite; // copy sprites to the summary screen
         }
     }
     

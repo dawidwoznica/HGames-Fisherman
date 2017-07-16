@@ -10,9 +10,8 @@ public class FishManager : MonoBehaviour {
 
     void Awake()
     {
-        NormalFish = Resources.LoadAll<Sprite>("Sprites/Fish/Normal");
+        NormalFish = Resources.LoadAll<Sprite>("Sprites/Fish/Normal"); // load all fish sprites from Resources/Sprites/Fish/***** folder to  sprite array
         RareFish = Resources.LoadAll<Sprite>("Sprites/Fish/Rare");
     }
-
 
 }

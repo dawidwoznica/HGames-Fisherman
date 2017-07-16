@@ -19,14 +19,16 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);    // destroy it
 
         DontDestroyOnLoad(gameObject); // dont destroy this when reloading scene
-        GetManagers();
+        GetManagers(); // get managers
     }
 
     private void GetManagers()
     {
+        // get all managers component
         FloatManager = GetComponent<FloatManager>();
         FishManager = GetComponent<FishManager>();
         ProgressBarManager = GetComponent<ProgressBarManager>();
         FishermanManager = GetComponent<FishermanManager>();
     }
+
 }

@@ -6,4 +6,5 @@ public class FloatManager : MonoBehaviour
 {
     public float Amplitude = 0.2f;
     public float Speed = 1.0f;
+
 }

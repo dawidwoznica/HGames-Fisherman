@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class RestartOnClick : MonoBehaviour
 {
-
     [SerializeField]
     private int _scene;
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(_scene);
+        SceneManager.LoadScene(_scene); // load scene
     }
-
 
 }

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114817076563618346}
   - component: {fileID: 114721023513857102}
   - component: {fileID: 114704388255273520}
+  - component: {fileID: 114966283965096332}
   m_Layer: 0
   m_Name: pref_GameManager
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Amplitude: 0.2
   Speed: 1
+--- !u!114 &114966283965096332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787156959972630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42cce70f1f0e8bb4f91f203dcdf14293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNumberOfFish: 0
+  PressSpaceText: Press Space to start fishing
+  UseArrowText: Now use Up/Down arrow keys
