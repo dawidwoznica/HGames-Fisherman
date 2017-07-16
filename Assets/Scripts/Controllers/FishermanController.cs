@@ -9,6 +9,7 @@ public class FishermanController : MonoBehaviour
     private int _fishOwned;
     private bool _isFishing;
     private IEnumerator _myCoroutine;
+    private AudioSource _fishSound;
     public FloatController FloatController;
     public FishingRodController FishingRodController;
     public FishController FishController;
@@ -19,6 +20,11 @@ public class FishermanController : MonoBehaviour
     public Image[] FishImages;
     public Text InfoText;
 
+
+    void Awake()
+    {
+        _fishSound = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -45,6 +51,7 @@ public class FishermanController : MonoBehaviour
     public void GetFish()
     {
         StopFishing(); // set fisherman in standing stance
+        _fishSound.Play();
         FishController.DrawFish(); // then draw random fish
         FishImages[_fishOwned].gameObject.SetActive(true); // turn on the UI image for the fish
         FishImages[_fishOwned].sprite = FishController.Fish; // and put sprite in it

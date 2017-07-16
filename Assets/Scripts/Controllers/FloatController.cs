@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class FloatController : MonoBehaviour
 {                
-    private Vector3 _startPosition;
     private Vector3 _currentPosition;
     private AudioSource _waterSplashSound;
+    [HideInInspector]
+    public Vector3 _startPosition;
 
     void Awake()
     {
