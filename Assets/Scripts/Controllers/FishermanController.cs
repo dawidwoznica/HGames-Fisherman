@@ -8,6 +8,7 @@ public class FishermanController : MonoBehaviour
 {
     private int _fishOwned;
     private bool _isFishing;
+    private IEnumerator _myCoroutine;
     public FloatController FloatController;
     public FishingRodController FishingRodController;
     public FishController FishController;
@@ -22,6 +23,7 @@ public class FishermanController : MonoBehaviour
     void Start()
     {
         _fishOwned = GameManager.FishermanManager.StartingNumberOfFish;
+        _myCoroutine = WaitForWish();
         StopFishing();
         foreach (Image image in FishImages) // Deactive all fish images on UI
         {
@@ -51,7 +53,7 @@ public class FishermanController : MonoBehaviour
 
         if (_fishOwned == 3) // and if there are 3 of them, finish the game
         {
-            GameFinishController.FinishTheGame(); // finish the game
+            GameFinishController.FadeOut(); // finish the game
         }
     }
 
@@ -65,7 +67,9 @@ public class FishermanController : MonoBehaviour
         InfoText.text = GameManager.FishermanManager.UseArrowText; // change player info text
         FloatController.ShowFloat(); // show the float
         FishingRodController.Throw(); // and rotate the fishing rod
-        StartCoroutine(WaitForWish()); 
+        _myCoroutine = WaitForWish();
+        InfoText.gameObject.SetActive(false);
+        StartCoroutine(_myCoroutine); 
     }
 
     public void StopFishing()
@@ -73,20 +77,24 @@ public class FishermanController : MonoBehaviour
         /// <summary>
         /// Standing stance.
         /// </summary>
+        
         _isFishing = false;
+        StopCoroutine(_myCoroutine);
         InfoText.text = GameManager.FishermanManager.PressSpaceText;
         FloatController.HideFloat(); // hide float
         FishingRodController.ReelIn(); // put fishing rod to the starting position
         ProgressBar.SetActive(false); // hide progress bard
         FishingPanel.SetActive(false); // and fishing panel
+        InfoText.gameObject.SetActive(true);
     }
 
     IEnumerator WaitForWish()
     {
-        int randomTime = Random.Range(1, 6); // draw random wait time value 
+        int randomTime = Random.Range(2, 7); // draw random wait time value 
         yield return new WaitForSeconds(randomTime); // wait for the fish
         ProgressBar.SetActive(true); // then show progress bar
         FishingPanel.SetActive(true); // and fishing panel
+        InfoText.gameObject.SetActive(true);
     }
 
 }

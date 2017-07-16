@@ -16,6 +16,15 @@ public class SceneLoader : MonoBehaviour
     private GameObject QuitButton;
 
 
+    void Update()
+    {
+        if (loadingText.gameObject.activeInHierarchy)
+        {
+            loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b,
+            Mathf.PingPong(Time.time, 1)); // then pulse the transparency of the loading text to let the player know that the computer is still working
+        }
+    }
+
     public void LoadLevel()
     {
         loadingText.text = "Loading..."; // set text to loading
@@ -24,10 +33,7 @@ public class SceneLoader : MonoBehaviour
 
         StartButton.SetActive(false); // hide buttons
         QuitButton.SetActive(false);
-        loadingText.gameObject.SetActive(true); // and show the loading text
-
-        loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b,
-            Mathf.PingPong(Time.time, 1)); // then pulse the transparency of the loading text to let the player know that the computer is still working
+        loadingText.gameObject.SetActive(true); // and show the loading text 
     }
 
     IEnumerator LoadNewScene()

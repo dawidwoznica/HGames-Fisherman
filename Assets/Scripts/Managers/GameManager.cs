@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public static FishManager FishManager;
     public static ProgressBarManager ProgressBarManager;
     public static FishermanManager FishermanManager;
+    public static WaterManager WaterManager;
 
 
     void Awake()
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour {
         FishManager = GetComponent<FishManager>();
         ProgressBarManager = GetComponent<ProgressBarManager>();
         FishermanManager = GetComponent<FishermanManager>();
+        WaterManager = GetComponent<WaterManager>();
     }
 
 }
