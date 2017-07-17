@@ -7,6 +7,7 @@ public class GameFinishController : MonoBehaviour
 {
     private Animator _animmator;
     private AudioSource _gameFinishSound;
+    public AudioSource WavesSound;
     public Image[] OwnedFishImages; // owned fish images
     public FishermanController FishermanController;
     public FishController FishController;
@@ -38,6 +39,7 @@ public class GameFinishController : MonoBehaviour
         ProgressBarController.enabled = false;
         FloadController.enabled = false;
 
+        WavesSound.Stop();
         _gameFinishSound.Play();
     }
     

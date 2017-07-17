@@ -97,7 +97,7 @@ public class FishermanController : MonoBehaviour
 
     IEnumerator WaitForWish()
     {
-        int randomTime = Random.Range(2, 7); // draw random wait time value 
+        int randomTime = Random.Range(3, 7); // draw random wait time value 
         yield return new WaitForSeconds(randomTime); // wait for the fish
         ProgressBar.SetActive(true); // then show progress bar
         FishingPanel.SetActive(true); // and fishing panel
