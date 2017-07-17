@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterManager : MonoBehaviour
 {
-    public float ScrollSpeed = 2;
-    public float WaterSizeX = 15.5f;
+    public float ScrollSpeed = 1;
+    public float WaterSizeX = 21.5f;
 
 }

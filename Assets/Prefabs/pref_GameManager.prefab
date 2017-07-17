@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9aee08d1a01fa342ad72a629ea9c845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrollSpeed: 2
-  WaterSizeX: 15.5
+  ScrollSpeed: 1
+  WaterSizeX: 21.5
 --- !u!114 &114966283965096332
 MonoBehaviour:
   m_ObjectHideFlags: 1
