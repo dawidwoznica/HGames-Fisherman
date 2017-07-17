@@ -14,6 +14,7 @@ public class WaterController : MonoBehaviour
 	
 	void Update ()
 	{
+        // just a water scroll function to simulate water movement
 	    float newPosition = Mathf.Repeat(Time.time * GameManager.WaterManager.ScrollSpeed, GameManager.WaterManager.WaterSizeX);
 	    transform.position = _startingPosition + Vector3.left * newPosition;
 	}
