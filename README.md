@@ -2,5 +2,4 @@
 
 Preferred resolution 1024x768
 
-Update 23.07.2017:
--Resolution bug fixed. All screen resolutions supported now.
+Update 23.07.2017: Resolution bug fixed. All screen resolutions supported now.
