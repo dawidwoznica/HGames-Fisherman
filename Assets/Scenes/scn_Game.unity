@@ -364,6 +364,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114957063922294968, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
+      propertyPath: WavesSound
+      value: 
+      objectReference: {fileID: 1912086860}
+    - target: {fileID: 114957063922294968, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
       propertyPath: FishermanController
       value: 
       objectReference: {fileID: 762366478}
@@ -387,66 +392,56 @@ Prefab:
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224423292124980868, guid: 8018239b24866344c8a7ba0011b77ea9,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 224423292124980868, guid: 8018239b24866344c8a7ba0011b77ea9,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224423292124980868, guid: 8018239b24866344c8a7ba0011b77ea9,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224423292124980868, guid: 8018239b24866344c8a7ba0011b77ea9,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.91
-      objectReference: {fileID: 0}
     - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
       propertyPath: m_Offset.x
-      value: -0.15771484
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
       propertyPath: m_Size.x
-      value: 49.738525
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114961827778050294, guid: 8018239b24866344c8a7ba0011b77ea9,
+    - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
-      propertyPath: m_RaycastTarget
+      propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 61916858147182168, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
       propertyPath: m_AutoTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50547218842305498, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82284433454239600, guid: 8018239b24866344c8a7ba0011b77ea9,
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 82284433454239600, guid: 8018239b24866344c8a7ba0011b77ea9,
-        type: 2}
-      propertyPath: BypassReverbZones
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 223749989666004978, guid: 8018239b24866344c8a7ba0011b77ea9,
+    - target: {fileID: 224464999739862048, guid: 8018239b24866344c8a7ba0011b77ea9,
         type: 2}
-      propertyPath: m_RenderMode
-      value: 0
+      propertyPath: m_AnchorMin.y
+      value: 0.26
       objectReference: {fileID: 0}
-    - target: {fileID: 114957063922294968, guid: 8018239b24866344c8a7ba0011b77ea9,
-        type: 2}
-      propertyPath: WavesSound
-      value: 
-      objectReference: {fileID: 1912086860}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8018239b24866344c8a7ba0011b77ea9, type: 2}
   m_IsPrefabParent: 0
@@ -492,10 +487,6 @@ Prefab:
     - target: {fileID: 1282601593586170, guid: e351db3d0bb68a648a073199988a4084, type: 2}
       propertyPath: m_Name
       value: Float
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282601593586170, guid: e351db3d0bb68a648a073199988a4084, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e351db3d0bb68a648a073199988a4084, type: 2}
@@ -716,7 +707,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4708198787084850, guid: bc21337d16b8aa3458ac7f1b04c881c4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 49
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4708198787084850, guid: bc21337d16b8aa3458ac7f1b04c881c4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -903,7 +894,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -919,7 +910,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.72537434
       objectReference: {fileID: 0}
     - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_LocalRotation.z
@@ -927,7 +918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6883546
       objectReference: {fileID: 0}
     - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_RootOrder
@@ -936,6 +927,10 @@ Prefab:
     - target: {fileID: 1661804797394856, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
       propertyPath: m_Name
       value: Footbridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752150934268490, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74aabdfc6d7e82b4984c4225ce11e73e, type: 2}

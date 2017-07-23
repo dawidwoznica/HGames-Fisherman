@@ -6,8 +6,8 @@ public class ProgressBarManager : MonoBehaviour
 {
 	public int MaxProgressValue = 1;
     public int StartingValue = 0;
-    public float ProgressPossitiveValue = 0.003f;
-    public float ProgressNegativeValue = 0.002f;
+    public float ProgressPossitiveValue = 0.002f;
+    public float ProgressNegativeValue = 0.003f;
     public Color FullProgressColor = Color.green;
     public Color NoProgressColor = Color.red; 
 
